@@ -22,3 +22,6 @@ dnf5 install -y git-annex
 #### Example for enabling a System Unit File
 
 # systemctl enable podman.socket
+
+# Drop fcos issue tracker and forum links from motd
+rm /usr/lib/motd.d/tracker.motd
