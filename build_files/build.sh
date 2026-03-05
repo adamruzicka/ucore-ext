@@ -10,7 +10,11 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y git-annex compsize restic wget incus
+dnf5 install -y git-annex compsize restic wget incus \
+    node-exporter prometheus-podman-exporter
+
+systemctl enable prometheus-node-exporter
+systemctl enable prometheus-podman-exporter
 
 # Use a COPR Example:
 #
