@@ -11,10 +11,11 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y git-annex compsize restic wget incus \
-    node-exporter prometheus-podman-exporter
+    node-exporter prometheus-podman-exporter \
+    zrepl
 
 systemctl enable prometheus-node-exporter
-systemctl enable prometheus-podman-exporter
+systemctl disable prometheus-podman-exporter
 
 # Use a COPR Example:
 #
