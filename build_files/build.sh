@@ -11,8 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y git-annex compsize restic wget incus \
-    node-exporter prometheus-podman-exporter \
-    zrepl
+    node-exporter prometheus-podman-exporter
 
 systemctl enable prometheus-node-exporter
 systemctl disable prometheus-podman-exporter
@@ -30,3 +29,7 @@ systemctl disable prometheus-podman-exporter
 
 # Drop fcos issue tracker and forum links from motd
 rm /usr/lib/motd.d/tracker.motd
+
+# zrepl
+dnf5 -y copr enable poettlerric/zrepl
+dnf5 -y install zrepl
