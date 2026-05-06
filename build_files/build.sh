@@ -29,3 +29,7 @@ rm /usr/lib/motd.d/tracker.motd
 # zrepl
 dnf5 -y copr enable poettlerric/zrepl
 dnf5 -y install zrepl
+
+# pi
+dnf5 -y install npm
+curl -fsSL https://pi.dev/install.sh | sh
