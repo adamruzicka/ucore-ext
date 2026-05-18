@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y git-annex compsize borgbackup wget incus just
+dnf5 install -y git-annex compsize wget incus
 
 # Use a COPR Example:
 #
@@ -29,10 +29,6 @@ rm /usr/lib/motd.d/tracker.motd
 # zrepl
 dnf5 -y copr enable poettlerric/zrepl
 dnf5 -y install zrepl
-
-# pi
-dnf5 -y install npm
-curl -fsSL https://pi.dev/install.sh | sh
 
 # kopia
 rpm --import https://kopia.io/signing-key
