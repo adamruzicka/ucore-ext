@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y git-annex compsize wget \
-	incus qemu-system-x86_64
+	incus qemu-system-x86_64 qemu-device-display-virtio-vga
 
 # Use a COPR Example:
 #
