@@ -10,8 +10,17 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y git-annex compsize wget just mc htop \
-	incus qemu-system-x86_64 qemu-device-display-virtio-vga
+dnf5 install -y compsize \
+		git-annex \
+		htop \
+		just \
+		mc \
+		wget
+
+# Incus and friends
+dnf5 install -y incus \
+		qemu-system-x86_64 \
+		qemu-device-display-virtio-vga
 
 # Use a COPR Example:
 #
