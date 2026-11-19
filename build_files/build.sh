@@ -15,6 +15,7 @@ dnf5 install -y compsize \
 		htop \
 		just \
 		mc \
+		powertop \
 		wget
 
 # Incus and friends
